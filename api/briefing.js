@@ -22,6 +22,7 @@ export default async function handler(req, res) {
     const feed = await parser.parseURL(feedUrl);
     const items = feed.items.slice(0, 12).map((item) => ({
       title: item.title || '',
+      author: item.creator || item.author || item['dc:creator'] || '',
       description: item.contentSnippet || item.content || item.description || '',
       link: item.link || '',
       pubDate: item.pubDate || item.isoDate || '',
