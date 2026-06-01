@@ -329,12 +329,6 @@ export default function App() {
                   )}
                 </div>
 
-                {article.author && (
-                  <p className="text-salmon-dim/70 text-xs mb-2">
-                    {article.author}
-                  </p>
-                )}
-
                 {article.description && (
                   <p className="text-gray-400 text-sm leading-relaxed mb-3">
                     {article.description}
